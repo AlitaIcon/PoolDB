@@ -33,7 +33,7 @@ for v in gv:
 ```python
 db_url = 'postgresql+psycopg2://xx:xx@xx:xx/xx?utf-8'
 pool = PoolDB(db_url=db_url)
-r = pool["select * from manage.substation limit 5"]  
+r = pool["select * from xx.xx limit 5"]  
 print(r)
 sqls = ["select * from xx.xx limit 5", "select * from xx.xx limit 4"]
 r_list = pool[sqls]  
