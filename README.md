@@ -21,6 +21,8 @@ pool.close(conn)
 ```python
 db_url = 'postgresql+psycopg2://xx:xx@xx:xx/xx?utf-8'
 pool = PoolDB(db_url=db_url)
+sqls = ["select * from xx.xx limit 5", "select * from xx.xx limit 4"]
+
 gv = pool.multi_data(sql=sqls)  # 多条数据并发获取，
 for v in gv:
     print(v)
@@ -33,7 +35,7 @@ db_url = 'postgresql+psycopg2://xx:xx@xx:xx/xx?utf-8'
 pool = PoolDB(db_url=db_url)
 r = pool["select * from manage.substation limit 5"]  
 print(r)
-sqls = ["select * from manage.substation limit 5", "select * from manage.substation limit 4"]
+sqls = ["select * from xx.xx limit 5", "select * from xx.xx limit 4"]
 r_list = pool[sqls]  
 print(r_list)
 ```
